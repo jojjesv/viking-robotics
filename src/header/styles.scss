@@ -57,3 +57,17 @@ $color: #2E7D32;
     }
   }
 }
+
+/* Medium size devices */
+@media (min-width: 768px) {
+  #global-nav {
+    .bg-shape {
+      background-image: url(../assets/viking_sillhouette.png);
+      background-repeat: no-repeat;
+      background-position: 120px 76px;
+      background-size: auto;
+
+      transform: rotate(-1.25deg);
+    }
+  }
+}

@@ -5,9 +5,10 @@ $picture-size: 120px;
   list-style: none;
   padding: 0;
 
+
   .member {
     display: grid;
-    margin-bottom: 24px;
+    margin-bottom: 36px;
 
     grid-template-rows: auto;
     grid-template-columns: $picture-size auto;
@@ -32,6 +33,7 @@ $picture-size: 120px;
 
     .name {
       margin: 8px 0 0 0;
+      white-space: nowrap;
       font-family: 'Share Tech Mono', monospace;
     }
 
@@ -74,6 +76,24 @@ $picture-size: 120px;
       .about {
         grid-column: 1;
       }
+    }
+  }
+}
+
+$grid-size: 320px;
+
+/* Start diplaying members in a grid. */
+@media (min-width: 768px) {
+  #team-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, $grid-size);
+    grid-template-rows: repeat(auto-fill, 250px);
+    max-width: $grid-size * 3;
+    margin: 0 auto;
+
+    .member {
+      text-align: center !important;
+      display: block;
     }
   }
 }

@@ -27,7 +27,7 @@
 
     .bg-shape {
       position: absolute;
-      top: 8px;
+      top: 48px;
       right: -24px;
       left: -24px;
       bottom: 0;
@@ -44,8 +44,9 @@
 
     .description {
       color: rgba(250, 250, 250, 0.75);
-      margin: 0;
+      margin: 0 auto;
       padding: 0 24px 24px 24px;
+      max-width: 560px;
     }
   }
 }

@@ -11,7 +11,7 @@ const tabs = [{
   title: 'Start'
 }, {
   path: '/sponsors',
-  title: 'Sponsorer'
+  title: 'Sponsors'
 }, {
   path: '/team',
   title: 'The Team'

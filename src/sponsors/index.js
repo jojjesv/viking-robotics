@@ -31,7 +31,7 @@ const sponsors = [{
   description: 'Teknikum är en ledande gymnasieskola inom områdena teknik, människa och samhälle. Vi lyssnar på näringslivets behov och anpassar våra utbildningar. Det är din bästa garanti för att få ett jobb.',
   logo: require('../assets/sponsors/teknikum.png'),
   color: 'rgb(151, 49, 86)'
-}]
+}];
 
 /**
  * A screen for showing sponsors.

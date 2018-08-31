@@ -8,6 +8,19 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+section:not(.full-width) {
+  max-width: 980px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bg-shape.textured {
+  background: #1B5E20;
+  background-image: url(./assets/circuit.png);
+  background-size: cover;
+}
+
 .padded {
   padding: 24px;
 }
@@ -21,7 +34,48 @@ h1 {
 .email {
   padding: 6px 12px;
   border: 1px dashed #BDBDBD;
+  background: #fafafa;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 17px;
   border-radius: 8px;
   display: inline-block;
   margin-top: 8px;
+}
+
+/* Task indicator */
+@keyframes task-indicator {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+$task-indicator-size: 24px;
+
+.task-indicator {
+  width: 36px !important;
+  height: 36px !important;
+  transform: translate(-18px, -18px) scale(0.18) translate(18px, 18px);
+  div:after {
+    transform: rotate(90deg);
+  }
+  div {
+    animation: task-indicator 1s linear infinite;
+    top: 100px;
+    left: 100px;
+  }
+  div,
+  div:after {
+    position: absolute;
+    width: 176px;
+    height: 176px;
+    border: 8px solid #3b5998;
+    border-top-color: transparent;
+    border-radius: 50%;
+  }
 }
