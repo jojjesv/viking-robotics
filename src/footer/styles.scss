@@ -1,0 +1,46 @@
+#global-footer {
+  position: relative;
+  overflow: hidden;
+
+  .bg-shape {
+    position: absolute;
+    top: 8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    transform: rotate(-1.5deg);
+    z-index: -1;
+    background: #1B5E20;
+  }
+}
+
+#footer-nav {
+  ul {
+    list-style: none;
+    padding: 24px 0;
+    li {
+      color: #fafafa;
+      padding: 12px;
+
+      a {
+        text-decoration: none;
+        padding: 0 12px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid rgba(250, 250, 250, 0.5);
+        border-radius: 2px;
+      }
+
+      .fb-logo {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+        background: url(../assets/fb_logo.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        position: relative;
+        top: 6px;
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+/* Mobile layout styles. */
+/* First section */
+#hero {
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 24px;
+  padding-top: 12px;
+}
+
+#hero-header {
+  margin-top: 0;
+  margin-bottom: 24px;
+  height: 12.5vh;
+
+  .behind {
+    font-size: 75%;
+    opacity: 0.75;
+    display: inline-block;
+    margin-bottom: 12px,
+  }
+}
+
+#hero-image {
+  max-width: 500px;
+  width: 100%;
+  display: inline-block;
+}
+
+#hero-quote {
+  height: 15vh;
+  margin: 36px 0 0 0;
+  display: inline-block;
+  line-height: 150%;
+  color: #757575;
+}
+
+.team-number {
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #43A047;
+  color: #fafafa;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+#gallery {
+  position: relative;
+  overflow: hidden;
+  padding-top: 36px;
+  padding-bottom: 12px;
+
+  .bg-shape {
+    position: absolute;
+    top: 8px;
+    left: -80px;
+    right: -80px;
+    bottom: 7px;
+    background: #1B5E20;
+    z-index: -1;
+    transform: rotate(1.5deg);
+  }
+
+  /* Gallery item */
+  .item {
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    /* Gallery item caption */
+    & + .caption {
+      margin: 8px 0 24px 0;
+      font-weight: 300;
+      color: rgba(250, 250, 250, 0.85);
+      font-size: 18px;
+    }
+  }
+}
+
+#video-container {
+  width: 100vw;
+  height: calc(100vw * (9 / 16));
+  display: inline-block;
+
+  >* {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#we-subheading {
+  margin: 24px 0 8px 0;
+}
+
+#we-like {
+  list-style: none;
+  padding: 0;
+  width: 240px;
+  margin: 0 auto;
+  text-align: left;
+
+  .text {
+    font-size: 18px;
+  }
+
+  .check {
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    background: url(../assets/ic_check.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    top: 10px;
+    margin-right: 8px;
+  }
+}

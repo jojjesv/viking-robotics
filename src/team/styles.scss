@@ -1,0 +1,79 @@
+$picture-size: 120px;
+
+#team-list {
+  /* Member picture */
+  list-style: none;
+  padding: 0;
+
+  .member {
+    display: grid;
+    margin-bottom: 24px;
+
+    grid-template-rows: auto;
+    grid-template-columns: $picture-size auto;
+    grid-column-gap: 18px;
+
+    text-align: left;
+
+    div {
+      grid-row: 1;
+    }
+      
+    .picture {
+      grid-column: 1;
+
+      width: $picture-size;
+      height: $picture-size;
+      border-radius: 50%;
+  
+      display: inline-block;
+      background-size: cover;
+    }
+
+    .name {
+      margin: 8px 0 0 0;
+      font-family: 'Share Tech Mono', monospace;
+    }
+
+    .role {
+      margin: 0;
+
+      .icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 6px;
+        background-size: cover;
+        display: inline-block;
+        position: relative;
+        top: 6px;
+      }
+    }
+
+    .email-link {
+      background: #2E7D32;
+      padding: 4px 8px;
+      border-radius: 4px;
+      position: relative;
+      top: 4px;
+      padding-top: 2px;
+      margin-top: 8px;
+      display: inline-block;
+      color: #fafafa;
+      font-size: 15px;
+      text-decoration: none;
+    }
+
+    &:nth-child(even) {
+      grid-template-columns: auto $picture-size;
+      text-align: right;
+
+      .picture {
+        grid-column: 2;
+      }
+
+      .about {
+        grid-column: 1;
+      }
+    }
+  }
+}

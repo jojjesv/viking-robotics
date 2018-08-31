@@ -1,0 +1,59 @@
+$color: #2E7D32;
+
+/* Mobile styles for global header. */
+#global-nav{
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 24px;
+  .bg-shape {
+    position: absolute;
+    left: -80px;
+    top: -80px;
+    right: -80px;
+    bottom: 24px;
+    background: $color;
+    box-shadow: 0 0 12px rgba(20, 20, 20, 0.1);
+    z-index: -1;
+    transform: rotate(-2.5deg);
+  }
+  ul {
+    margin: 0;
+    padding: 12px 0 8px 0;
+    li {
+      position: relative;
+      font-family: 'Share Tech Mono', monospace;
+      display: inline-block;
+      padding: 12px;
+      font-size: 18px;
+
+      &,
+      a {
+        color: #fafafa;
+        text-decoration: none;
+      }
+
+      .selected-effect {
+        display: none;
+      }
+
+      &.active {
+        &,
+        a {
+          color: $color;
+        }
+        .selected-effect {
+          z-index: -1;
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: -28px;
+          background: #fafafa;
+          display: initial;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}

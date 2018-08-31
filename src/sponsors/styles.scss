@@ -1,0 +1,51 @@
+/* Subheading up top. */
+#subheading-top {
+}
+
+/* List of sponsors. */
+#sponsor-list {
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin-bottom: 48px;
+    box-shadow: 0 0 24px rgba(20, 20, 20, 0.15);
+  }
+
+  /* Wraps background shape and sponsor info. */
+  .shape-container {
+      position: relative;
+
+    .logo {
+      width: 100%;
+      height: 280px;
+      background-color: white;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .bg-shape {
+      position: absolute;
+      top: 8px;
+      right: -24px;
+      left: -24px;
+      bottom: 0;
+      z-index: -1;
+      transform: rotate(1.5deg);
+    }
+
+    /* Sponsor name */
+    .name {
+      margin: 0;
+      padding: 10px 0 12px 0;
+      color: #fafafa;
+    }
+
+    .description {
+      color: rgba(250, 250, 250, 0.75);
+      margin: 0;
+      padding: 0 24px 24px 24px;
+    }
+  }
+}
