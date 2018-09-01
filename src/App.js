@@ -14,7 +14,7 @@ import {
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div className="App">
           <GlobalHeader />
           <Route exact path="/" component={FrontpageScreen} />
@@ -22,7 +22,7 @@ class App extends Component {
           <Route exact path="/team" component={TeamScreen} />
           <GlobalFooter />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
