@@ -51,6 +51,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
+  "homepage": "https://jojjesv.github.io/vikingrobotics/",
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,mjs}"

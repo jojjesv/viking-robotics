@@ -7,7 +7,7 @@ import SponsorsScreen from './sponsors';
 import TeamScreen from './team';
 
 import {
-  BrowserRouter,
+  HashRouter,
   Route
 } from 'react-router-dom'
 
