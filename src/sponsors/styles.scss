@@ -5,16 +5,18 @@
 /* List of sponsors. */
 #sponsor-list {
   padding: 0;
+  margin: 0;
   list-style: none;
+  overflow: hidden;
 
   li {
     margin-bottom: 48px;
-    box-shadow: 0 0 24px rgba(20, 20, 20, 0.15);
   }
 
   /* Wraps background shape and sponsor info. */
   .shape-container {
-      position: relative;
+    position: relative;
+    padding-bottom: 12px;
 
     .logo {
       width: 100%;
@@ -30,9 +32,10 @@
       top: 48px;
       right: -24px;
       left: -24px;
-      bottom: 0;
+      bottom: 12px;
       z-index: -1;
       transform: rotate(1.5deg);
+      box-shadow: 0 0 24px rgba(20, 20, 20, 0.15);
     }
 
     /* Sponsor name */
@@ -47,6 +50,29 @@
       margin: 0 auto;
       padding: 0 24px 24px 24px;
       max-width: 560px;
+    }
+  }
+}
+
+/* Display items as a grid */
+@media (min-width: 992px) {
+  #sponsor-list {
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: auto auto;
+
+    li {
+      &:nth-child(odd) {
+        .bg-shape {
+          right: 0;
+        }
+      }
+      &:nth-child(even) {
+        .bg-shape {
+          left: 0;
+        }
+      }
     }
   }
 }

@@ -1,7 +1,6 @@
 /* Mobile layout styles. */
 /* First section */
 #hero {
-  height: 100vh;
   box-sizing: border-box;
   padding: 24px;
   padding-top: 12px;
@@ -10,7 +9,10 @@
 #hero-header {
   margin-top: 0;
   margin-bottom: 24px;
-  height: 12.5vh;
+
+  .name {
+    font-family: 'Share Tech Mono', monospace;
+  }
 
   .behind {
     font-size: 75%;
@@ -27,11 +29,26 @@
 }
 
 #hero-quote {
-  height: 15vh;
-  margin: 36px 0 0 0;
+  margin: 8px 0 0 0;
   display: inline-block;
   line-height: 150%;
   color: #757575;
+
+  .quote span:first-of-type {
+    font-size: 20px;
+    color: #616161;
+  }
+
+  img {
+    position: relative;
+    top: 4px;
+  }
+
+  .quoter {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 16px;
+  }
 }
 
 .team-number {
@@ -165,5 +182,19 @@ $video-max-width: 1024px;
     grid-row: 2;
     grid-column: 2;
     display: initial;
+
+    .task-indicator {
+      position: relative;
+      top: 24px;
+    }
+  }
+}
+
+#fb-link{
+  color: #3b5998;
+  text-decoration: none;
+  img {
+    position: relative;
+    top: 4px;
   }
 }

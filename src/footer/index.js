@@ -14,7 +14,7 @@ export default class GlobalFooter extends React.Component {
         <nav id="footer-nav">
           <ul>
             <li>
-              <a>Contact us</a>
+              <a href="mailto:vikingrobotics.teknikum@gmail.com">Contact us</a>
             </li>
             <li>
               <a href="https://www.facebook.com/VikingRoboticsFRC6819/"

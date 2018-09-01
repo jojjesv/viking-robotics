@@ -32,7 +32,7 @@ export default class GlobalHeader extends React.Component {
         <ul>
           {
             tabs.map(t => (
-              <li className={pathname == t.path ? 'active' : undefined}>
+              <li key={t.path} className={pathname == t.path ? 'active' : undefined}>
                 {
                   pathname == t.path && <div className="selected-effect"></div>
                 }

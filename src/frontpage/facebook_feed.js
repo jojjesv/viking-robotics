@@ -1,4 +1,3 @@
-let FB;
 export const initFeed = (callback) => {
   //  Load Facebooks JavaScript SDK
   (function (d, s, id) {

@@ -38,6 +38,10 @@ const sponsors = [{
  * @author Johan Svensson
  */
 export default class SponsorsScreen extends React.Component {
+  componentDidMount() {  
+    document.title = "Sponsors - #6819 Viking Robotics";
+  }
+
   render() {
     return (
       <div>
@@ -49,8 +53,8 @@ export default class SponsorsScreen extends React.Component {
         </div>
         <ul id="sponsor-list">
           {
-            sponsors.map(s => (
-              <li>
+            sponsors.map((s, i) => (
+              <li key={i.toString()}>
                 <div className="shape-container">
                   <div className="bg-shape" style={{
                     backgroundColor: s.color

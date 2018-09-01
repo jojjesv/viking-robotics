@@ -12,9 +12,7 @@ const links = {
  */
 export default class FrontpageScreen extends React.Component {
   componentDidMount() {
-    require('./facebook_feed').initFeed(() => {
-      debugger;
-    })
+    document.title = "#6819 Viking Robotics";
   }
 
   render() {
@@ -23,7 +21,7 @@ export default class FrontpageScreen extends React.Component {
         <section id="hero">
           <h1 id="hero-header">
             <span className="behind">Welcome to the official webpage of</span><br />
-            Teknikum's FRC Team <span className="team-number">#6819</span> Viking Robotics
+            Teknikum's FRC Team <span className="team-number">#6819</span> <span className="name">Viking Robotics</span>
         </h1>
           <div id="left-side">
             <img id="hero-image" src={require('../assets/viking.png')}
@@ -31,21 +29,28 @@ export default class FrontpageScreen extends React.Component {
 
             <p id="hero-quote">
               <i className="quote">
-                “The best thing about FRC is the chance to team up with other equally dedicated friends, to work towards a common goal and utilize your creativity, all outside the usual school boundaries. This is more than a school assignment, we are doing something for real.”
-            </i>
-              (Anton Wikström, team member Viking Robotics)
-          </p>
+                <img src={require('../assets/ic_quotes.png')} /><span>The best thing about FRC</span> is the chance to team up with other equally dedicated friends, to work towards a common goal and utilize your creativity, all outside the usual school boundaries. This is more than a school assignment, we are doing something for real.”
+            </i><br />
+              <span className="quoter">— Anton Wikström, team member Viking Robotics</span>
+            </p>
           </div>
-          <div id="facebook-feed" class="fb-page" data-href={links.facebook}
+          <div id="facebook-feed" ref={e => {
+            if (e) {
+              require('./facebook_feed').initFeed();
+            }
+          }}
+            className="fb-page" data-href={links.facebook}
             data-tabs="timeline" data-small-header="false"
             data-adapt-container-width="true" data-hide-cover="false"
             data-show-facepile="true">
-            <blockquote cite={links.facebook}
-              class="fb-xfbml-parse-ignore">
-              <a href={links.facebook}>Loading our Facebook feed</a>
-              <div style={{ position: 'relative' }}>
+            <div className="fb-xfbml-parse-ignore">
+              <a href={links.facebook} id="fb-link" target="_blank">
+                <span>Just a sec, loading our Facebook feed </span><img src={require('../assets/ic_external_fb.png')} />
+              </a>
+              <div style={{ position: 'relative', textAlign: 'center' }}>
+                <div className="task-indicator blue"></div>
               </div>
-            </blockquote>
+            </div>
           </div>
         </section>
 
@@ -64,8 +69,8 @@ export default class FrontpageScreen extends React.Component {
           <div id="video-container">
             <iframe id="video" width="100%" height="100%"
               src="https://www.youtube.com/embed/VREYn9Keg0I"
-              frameborder="0" allow="autoplay; encrypted-media"
-              allowfullscreen>
+              frameBorder="0" allow="autoplay; encrypted-media"
+              allowFullScreen={true}>
             </iframe>
           </div>
         </section>

@@ -21,14 +21,18 @@ const team = [{
  * @author Johan Svensson
  */
 export default class TeamScreen extends React.Component {
+  componentDidMount() {  
+    document.title = "Team - #6819 Viking Robotics";
+  }
+
   render() {
     return (
       <div className="padded">
-        <h1 style={{ margin: 0, marginBottom: 36 }}>Vikings</h1>
+        <h1 style={{ margin: 0, marginBottom: 36 }}>Meet the Vikings</h1>
         <ul id="team-list">
           {
-            team.map(member => (
-              <li className="member">
+            team.map((member, i) => (
+              <li className="member" key={i.toString()}>
                 <div className="picture" style={{
                   backgroundImage: `url(${member.image})`
                 }}></div>
