@@ -1,5 +1,42 @@
 $picture-size: 120px;
 
+/* Hero container */
+#team-hero {
+  position: relative;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  overflow: hidden;
+  text-align: center;
+
+  .bg {
+    $radius: 8px;
+    position: absolute;
+    left: -$radius;
+    top: -$radius;
+    bottom: -$radius;
+    right: -$radius;
+    background-image: url(../assets/team_hero.jpg);
+    background-size: cover;
+    filter: blur($radius) brightness(50%);
+    z-index: -1;
+    background-position: center;
+  }
+
+  .cover-image {
+    width: 100%;
+    max-width: 100vh;
+  }
+
+  .heading {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    color: #fafafa;
+  }
+}
+
 #team-list {
   /* Member picture */
   list-style: none;
