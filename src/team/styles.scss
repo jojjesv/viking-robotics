@@ -1,5 +1,12 @@
 $picture-size: 120px;
 
+.divider {
+  width: 100%;
+  max-width: 760px;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  margin: auto;
+}
+
 /* Hero container */
 #team-hero {
   position: relative;
@@ -8,6 +15,7 @@ $picture-size: 120px;
   width: 100vw;
   overflow: hidden;
   text-align: center;
+  margin-bottom: 48px;
 
   .bg {
     $radius: 8px;
@@ -34,6 +42,88 @@ $picture-size: 120px;
     transform: translateX(-50%);
     bottom: 0;
     color: #fafafa;
+  }
+}
+
+#groups {
+  margin: 0 0 64px 0;
+}
+
+/* Group picture container */
+.group-container {
+  position: relative;
+
+  &:first-of-type {
+    padding-top: 24px;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.35);
+  }
+
+
+  > .bg-solid,
+  > .bg-gradient {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  > .bg-solid {
+    opacity: 0.35;
+  }
+
+  > .bg-gradient {
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 1), transparent);
+  }
+
+  .group {
+    max-width: 760px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding: 0 0 36px 0;
+
+    .photo-container {
+      position: relative;
+      .curtains {
+        position: absolute;
+        left: -100vw;
+        right: -100vw;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+
+  img {
+    max-width: 860px;
+    width: 100%;
+    z-index: 99;
+    position: relative;
+    border-radius: 3px;
+  }
+
+  /* Names label */
+  .names {
+    color: rgba(250, 250, 250, 0.75);
+    max-width: 85%;
+    text-align: center;
+    margin: auto;
+    line-height: 175%;
+
+    span {
+      color: #fafafa;
+    }
+  }
+
+  .caption {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 24px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.15);
   }
 }
 
